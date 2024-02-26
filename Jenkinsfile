@@ -1,14 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('version') {
+        stage('Run Python Script') {
             steps {
-                bat "python --version"
-            }
-        }
-        stage('hello'){
-            steps{
-                bat '"C:/python/python.exe" C:/zzzz/hello.py"'
+                script {
+                    bat '"C:/python/python.exe" C:/zzzz/hello.py'
+                }
             }
         }
     }
