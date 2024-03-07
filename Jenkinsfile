@@ -11,9 +11,7 @@ pipeline {
             steps {
                 script {
                     def file_path = params.PYTHON_FILE_PATH.trim()
-                    if (file_path.empty) {
-                        error('File path is empty')
-                    } else {
+                     else {
                         def file = new File(file_path)
                         if (!file.exists()) {
                             error('File does not exist')
